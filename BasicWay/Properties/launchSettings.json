@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "App": {
+    "BasicWay": {
       "commandName": "Project",
       "environmentVariables": {
-        "ENVIRONMENT": "DEV"
+        "ENVIRONMENT": "Development"
       }
     }
   }

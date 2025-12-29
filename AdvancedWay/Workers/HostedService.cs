@@ -1,29 +1,25 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using AdvancedWay.Services;
+﻿using AdvancedWay.Services;
 using Microsoft.Extensions.Hosting;
 
-namespace AdvancedWay.Workers
+namespace AdvancedWay.Workers;
+
+public class HostedService : BackgroundService
 {
-    public class HostedService : BackgroundService
+    private readonly IDummyService _service;
+
+    private static readonly TimeSpan Delay = TimeSpan.FromSeconds(5);
+
+    public HostedService(IDummyService service)
     {
-        private readonly IDummyService _service;
+        _service = service;
+    }
 
-        private static readonly TimeSpan Delay = TimeSpan.FromSeconds(5);
-
-        public HostedService(IDummyService service)
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
         {
-            _service = service;
-        }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                await _service.DoNothingAsync();
-                await Task.Delay(Delay, stoppingToken);
-            }
+            await _service.DoNothingAsync();
+            await Task.Delay(Delay, stoppingToken);
         }
     }
 }

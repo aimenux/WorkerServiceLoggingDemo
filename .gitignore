@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 /AdvancedWay/appsettings.dev.json
 /BasicWay/appsettings.dev.json
+
+# JetBrains
+.idea/*

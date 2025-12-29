@@ -20,4 +20,4 @@ Using microsoft built-in logging for long-running cross-platform services
 >> :pushpin: application insights target
 >
 
-**`Tools`** : vs19, net 5.0
+**`Tools`** : net 10

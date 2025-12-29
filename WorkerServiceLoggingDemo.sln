@@ -9,6 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		README.md = README.md
+		.gitignore = .gitignore
+		Directory.Packages.props = Directory.Packages.props
+		Directory.Build.props = Directory.Build.props
+		.editorconfig = .editorconfig
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedWay", "AdvancedWay\AdvancedWay.csproj", "{BFF7F055-BDE6-4815-A46D-621DA9396AAE}"

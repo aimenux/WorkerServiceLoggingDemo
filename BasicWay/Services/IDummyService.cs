@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿namespace BasicWay.Services;
 
-namespace BasicWay.Services
+public interface IDummyService
 {
-    public interface IDummyService
-    {
-        Task DoNothingAsync();
-    }
+    Task DoNothingAsync();
 }
